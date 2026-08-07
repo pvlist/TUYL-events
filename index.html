@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Triple Up Your Lifestyle Calender</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7fa;
+    color:#222;
+}
+
+header{
+    background:linear-gradient(135deg,#0f172a,#2563eb);
+    color:white;
+    text-align:center;
+    padding:70px 20px;
+}
+
+header h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+header p{
+    font-size:1.2rem;
+    opacity:.9;
+}
+
+.container{
+    max-width:900px;
+    margin:40px auto;
+    padding:0 20px;
+}
+
+.search{
+    width:100%;
+    padding:15px 20px;
+    border-radius:12px;
+    border:none;
+    font-size:16px;
+    margin-bottom:30px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.event{
+    display:flex;
+    gap:20px;
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    margin-bottom:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.25s;
+}
+
+.event:hover{
+    transform:translateY(-4px);
+}
+
+.event img{
+    width:220px;
+    object-fit:cover;
+}
+
+.info{
+    padding:20px;
+    flex:1;
+}
+
+.date{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    padding:6px 12px;
+    border-radius:25px;
+    font-size:14px;
+    margin-bottom:12px;
+}
+
+h2{
+    margin-bottom:10px;
+}
+
+.location{
+    color:#666;
+    margin-bottom:10px;
+}
+
+.description{
+    color:#444;
+    line-height:1.5;
+}
+
+button{
+    margin-top:18px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 18px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+footer{
+    text-align:center;
+    padding:40px;
+    color:#777;
+}
+
+@media(max-width:700px){
+
+.event{
+    flex-direction:column;
+}
+
+.event img{
+    width:100%;
+    height:220px;
+}
+
+header h1{
+    font-size:2rem;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Triple Up Your Lifestyle Events</h1>
+    <p>Ontdek alle aankomende evenementen op één plek.</p>
+</header>
+
+<div class="container">
+
+<input
+class="search"
+id="search"
+type="text"
+placeholder="Zoek op evenement of plaats...">
+
+<div id="events"></div>
+
+</div>
+
+<footer>
+©️ 2026 Barry
+</footer>
+
+<script>
+
+const events = [
+
+{
+title:"Summer Beats Festival",
+date:"2026-08-15",
+location:"Amsterdam",
+description:"Een dag vol live muziek, foodtrucks en gezellige festivalsfeer.",
+image:"https://picsum.photos/600/400?random=11"
+},
+
+{
+title:"Food Truck Festival",
+date:"2026-08-22",
+location:"Utrecht",
+description:"Proef gerechten van meer dan 40 foodtrucks uit Nederland.",
+image:"https://picsum.photos/600/400?random=12"
+},
+
+{
+title:"Openlucht Bioscoop",
+date:"2026-09-05",
+location:"Rotterdam",
+description:"Bekijk een klassieker onder de sterrenhemel.",
+image:"https://picsum.photos/600/400?random=13"
+},
+
+{
+title:"Bourgondisch Weekend",
+date:"2026-09-19",
+location:"Den Bosch",
+description:"Geniet van streekproducten, wijn en livemuziek.",
+image:"https://picsum.photos/600/400?random=14"
+},
+
+{
+title:"Winter Licht Festival",
+date:"2026-10-10",
+location:"Eindhoven",
+description:"Een sfeervol lichtfestival met kunst en interactieve installaties.",
+image:"https://picsum.photos/600/400?random=15"
+}
+
+];
+
+// sorteer automatisch op datum
+events.sort((a,b)=>new Date(a.date)-new Date(b.date));
+
+const container=document.getElementById("events");
+const search=document.getElementById("search");
+
+function formatDate(date){
+    return new Date(date).toLocaleDateString("nl-NL",{
+        weekday:"long",
+        day:"numeric",
+        month:"long",
+        year:"numeric"
+    });
+}
+
+function render(list){
+
+container.innerHTML="";
+
+list.forEach(event=>{
+
+container.innerHTML+=`
+<div class="event">
+
+<img src="${event.image}" alt="${event.title}">
+
+<div class="info">
+
+<div class="date">${formatDate(event.date)}</div>
+
+<h2>${event.title}</h2>
+
+<div class="location">📍 ${event.location}</div>
+
+<p class="description">
+${event.description}
+</p>
+
+<button>Meer informatie</button>
+
+</div>
+
+</div>
+`;
+
+});
+
+}
+
+render(events);
+
+search.addEventListener("keyup",()=>{
+
+const value=search.value.toLowerCase();
+
+const filtered=events.filter(event=>
+
+event.title.toLowerCase().includes(value) ||
+event.location.toLowerCase().includes(value)
+
+);
+
+render(filtered);
+
+});
+
+</script>
+
+</body>
+</html>
