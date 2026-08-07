@@ -162,118 +162,65 @@ placeholder="Zoek op evenement of plaats...">
 ©️ 2026 Barry
 </footer>
 
+<!-- 1. Load the external events file first -->
+<script src="./events.js"></script>
+
+<!-- 2. Execute the rendering and search logic -->
 <script>
+  // Ensure 'events' array exists before proceeding
+  if (typeof events !== "undefined" && Array.isArray(events)) {
+    // Sort automatically by date
+    events.sort((a, b) => new Date(a.date) - new Date(b.date));
 
-const events = [
+    const container = document.getElementById("events");
+    const search = document.getElementById("search");
 
-{
-title:"Summer Beats Festival",
-date:"2026-08-15",
-location:"Amsterdam",
-description:"Een dag vol live muziek, foodtrucks en gezellige festivalsfeer.",
-image:"https://picsum.photos/600/400?random=11"
-},
-
-{
-title:"Food Truck Festival",
-date:"2026-08-22",
-location:"Utrecht",
-description:"Proef gerechten van meer dan 40 foodtrucks uit Nederland.",
-image:"https://picsum.photos/600/400?random=12"
-},
-
-{
-title:"Openlucht Bioscoop",
-date:"2026-09-05",
-location:"Rotterdam",
-description:"Bekijk een klassieker onder de sterrenhemel.",
-image:"https://picsum.photos/600/400?random=13"
-},
-
-{
-title:"Bourgondisch Weekend",
-date:"2026-09-19",
-location:"Den Bosch",
-description:"Geniet van streekproducten, wijn en livemuziek.",
-image:"https://picsum.photos/600/400?random=14"
-},
-
-{
-title:"Winter Licht Festival",
-date:"2026-10-10",
-location:"Eindhoven",
-description:"Een sfeervol lichtfestival met kunst en interactieve installaties.",
-image:"https://picsum.photos/600/400?random=15"
-}
-
-];
-
-// sorteer automatisch op datum
-events.sort((a,b)=>new Date(a.date)-new Date(b.date));
-
-const container=document.getElementById("events");
-const search=document.getElementById("search");
-
-function formatDate(date){
-    return new Date(date).toLocaleDateString("nl-NL",{
-        weekday:"long",
-        day:"numeric",
-        month:"long",
-        year:"numeric"
+    function formatDate(date) {
+    return new Date(date).toLocaleString("nl-NL", {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit"
     });
 }
 
-function render(list){
+    function render(list) {
+      if (list.length === 0) {
+        container.innerHTML = "<p>Geen evenementen gevonden.</p>";
+        return;
+      }
 
-container.innerHTML="";
+      container.innerHTML = list.map(event => `
+        <div class="event">
+          <img src="${event.image}" alt="${event.title}">
+          <div class="info">
+            <div class="date">${formatDate(event.date)}</div>
+            <h2>${event.title}</h2>
+            <div class="location">📍 ${event.location}</div>
+            <p class="description">${event.description}</p>
+            <button>Meer informatie</button>
+          </div>
+        </div>
+      `).join("");
+    }
 
-list.forEach(event=>{
+    // Initial render
+    render(events);
 
-container.innerHTML+=`
-<div class="event">
-
-<img src="${event.image}" alt="${event.title}">
-
-<div class="info">
-
-<div class="date">${formatDate(event.date)}</div>
-
-<h2>${event.title}</h2>
-
-<div class="location">📍 ${event.location}</div>
-
-<p class="description">
-${event.description}
-</p>
-
-<button>Meer informatie</button>
-
-</div>
-
-</div>
-`;
-
-});
-
-}
-
-render(events);
-
-search.addEventListener("keyup",()=>{
-
-const value=search.value.toLowerCase();
-
-const filtered=events.filter(event=>
-
-event.title.toLowerCase().includes(value) ||
-event.location.toLowerCase().includes(value)
-
-);
-
-render(filtered);
-
-});
-
+    // Filter events on input
+    search.addEventListener("input", () => {
+      const value = search.value.toLowerCase().trim();
+      const filtered = events.filter(event =>
+        event.title.toLowerCase().includes(value) ||
+        event.location.toLowerCase().includes(value)
+      );
+      render(filtered);
+    });
+  } else {
+    console.error("The 'events' variable was not found in events.js");
+  }
 </script>
 
 </body>
