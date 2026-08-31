@@ -159,7 +159,7 @@ placeholder="Zoek op evenement of plaats...">
 </div>
 
 <footer>
-©️ 2026 Barry
+©️ 2026 Barry Wayne
 </footer>
 
 <!-- 1. Load the external events file first -->
@@ -167,16 +167,20 @@ placeholder="Zoek op evenement of plaats...">
 
 <!-- 2. Execute the rendering and search logic -->
 <script>
-  // Ensure 'events' array exists before proceeding
-  if (typeof events !== "undefined" && Array.isArray(events)) {
-    // Sort automatically by date
-    events.sort((a, b) => new Date(a.date) - new Date(b.date));
+if (typeof events !== "undefined" && Array.isArray(events)) {
+  const container = document.getElementById("events");
+  const search = document.getElementById("search");
 
-    const container = document.getElementById("events");
-    const search = document.getElementById("search");
+  // 1. Filter out events where the date/time has already passed
+  const now = new Date();
+  const upcomingEvents = events.filter(event => new Date(event.date) >= now);
 
-    function formatDate(date) {
-    return new Date(date).toLocaleString("nl-NL", {
+  // Sort remaining upcoming events chronologically
+  upcomingEvents.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+  function formatDate(date) {
+    const d = new Date(date);
+    const formatter = new Intl.DateTimeFormat("nl-NL", {
         weekday: "long",
         day: "numeric",
         month: "long",
@@ -184,15 +188,30 @@ placeholder="Zoek op evenement of plaats...">
         hour: "2-digit",
         minute: "2-digit"
     });
-}
 
-    function render(list) {
-      if (list.length === 0) {
-        container.innerHTML = "<p>Geen evenementen gevonden.</p>";
-        return;
-      }
+    return formatter
+    .formatToParts(d)
+    .map(part => {
+    if (part.type === "weekday") {
+        return part.value.charAt(0).toUpperCase() + part.value.slice(1);
+    }
+    return part.value;
+    }).join("");
+  }
 
-      container.innerHTML = list.map(event => `
+  function render(list) {
+    if (list.length === 0) {
+      container.innerHTML = "<p>Geen aankomende evenementen gevonden.</p>";
+      return;
+    }
+
+    container.innerHTML = list.map(event => {
+      // 2. Only generate a button link if url exists and is not empty
+      const buttonHTML = event.url && event.url.trim() !== "" 
+        ? `<a href="${event.url}" target="_blank" rel="noopener noreferrer"><button>Meer informatie</button></a>`
+        : "";
+
+      return `
         <div class="event">
           <img src="${event.image}" alt="${event.title}">
           <div class="info">
@@ -200,27 +219,28 @@ placeholder="Zoek op evenement of plaats...">
             <h2>${event.title}</h2>
             <div class="location">📍 ${event.location}</div>
             <p class="description">${event.description}</p>
-            <button>Meer informatie</button>
+            ${buttonHTML}
           </div>
         </div>
-      `).join("");
-    }
-
-    // Initial render
-    render(events);
-
-    // Filter events on input
-    search.addEventListener("input", () => {
-      const value = search.value.toLowerCase().trim();
-      const filtered = events.filter(event =>
-        event.title.toLowerCase().includes(value) ||
-        event.location.toLowerCase().includes(value)
-      );
-      render(filtered);
-    });
-  } else {
-    console.error("The 'events' variable was not found in events.js");
+      `;
+    }).join("");
   }
+
+  // Initial render with upcoming events
+  render(upcomingEvents);
+
+  // Search filter
+  search.addEventListener("input", () => {
+    const value = search.value.toLowerCase().trim();
+    const filtered = upcomingEvents.filter(event =>
+      event.title.toLowerCase().includes(value) ||
+      event.location.toLowerCase().includes(value)
+    );
+    render(filtered);
+  });
+} else {
+  console.error("The 'events' array was not loaded properly.");
+}
 </script>
 
 </body>

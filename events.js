@@ -45,8 +45,9 @@ const events = [
     title: "Business Development Seminar (BDS)",
     date: "2026-09-05T13:00:00",
     location: "Tongerloplein 1, 5071 CX Udenhout",
-    description: "Het maandelijkse seminar waar fantastische spreker jouw inspireren en motiveren bij het bereiken van jouw dromen en doelen",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQojPfGlItd6LIbnyJwLgBaeJsOXCcB7qFqS6JCX5Y8xQ&s=10"
+    description: "★ Guest speakers: We are pleased to welcome “Platinums” Sven & Benita Nisius from Switzerland at this seminar!",
+    image: "https://ci3.googleusercontent.com/meips/ADKq_NYrFQuE69Y3DEO0Cd7B_xM1jLShTOKa1gS0Hc9hZ0Ywlc39AQPdI3Ysm8XG_GXuC79Hc8_eUw7Ic5SDbwgUsAzw9OtK7onGx7dfis50tYuuCBUIF-00C9a2_BW_-eXSJtj00kJlFv1dDI7NQHKVSHYEJepNww=s0-d-e1-ft#https://www.meadowshale.eu/amember/data/public/editor/_Speakers/Nisius_Sven%26Benita%202026.jpg",
+    url: "https://www.meadowshale.eu/amember/signup/ticketshop"
   },
   {
     title: "Powerboost",
@@ -67,14 +68,16 @@ const events = [
     date: "2026-11-07T10:00:00",
     location: "Arena Ursynów, Rotmistrza Witolda Pileckiego, 12202-781 Warsaw, Poland",
     description: "Er is een leven vòòr FEC en er is een leven ná FEC",
-    image: "https://ci3.googleusercontent.com/meips/ADKq_NbzUBtO5cgsnYTphikYrjBZ0omWL_UAEQFZFKWY989u5E1I52WrDiDz8En5QNeuQPm2q_50WMFUmgfGc_xAfJx_gDj3c9M0nD6vpRGSdENixhorxWObqS1sJ6QLGhodA9rfYIPXhPui-xiG-L5VtgnuM95_GD2PkW8=s0-d-e1-ft#https://mcusercontent.com/0cd9acdf951e5f4c839bde221/images/fa8488c9-a600-27e6-55eb-eff7b9a649f5.png"
+    image: "https://ci3.googleusercontent.com/meips/ADKq_NbzUBtO5cgsnYTphikYrjBZ0omWL_UAEQFZFKWY989u5E1I52WrDiDz8En5QNeuQPm2q_50WMFUmgfGc_xAfJx_gDj3c9M0nD6vpRGSdENixhorxWObqS1sJ6QLGhodA9rfYIPXhPui-xiG-L5VtgnuM95_GD2PkW8=s0-d-e1-ft#https://mcusercontent.com/0cd9acdf951e5f4c839bde221/images/fa8488c9-a600-27e6-55eb-eff7b9a649f5.png",
+    url: "https://mcusercontent.com/0cd9acdf951e5f4c839bde221/files/0d03b57e-3e79-8bb8-776b-86cee12a90a7/European_FEC_2026_newsletter_EN_2.pdf"
   },
   {
     title: "Free Enterprise Celebration (FEC)",
     date: "2026-11-08T11:00:00",
     location: "Arena Ursynów, Rotmistrza Witolda Pileckiego, 12202-781 Warsaw, Poland",
     description: "Er is een leven vòòr FEC en er is een leven ná FEC",
-    image: "https://ci3.googleusercontent.com/meips/ADKq_NbzUBtO5cgsnYTphikYrjBZ0omWL_UAEQFZFKWY989u5E1I52WrDiDz8En5QNeuQPm2q_50WMFUmgfGc_xAfJx_gDj3c9M0nD6vpRGSdENixhorxWObqS1sJ6QLGhodA9rfYIPXhPui-xiG-L5VtgnuM95_GD2PkW8=s0-d-e1-ft#https://mcusercontent.com/0cd9acdf951e5f4c839bde221/images/fa8488c9-a600-27e6-55eb-eff7b9a649f5.png"
+    image: "https://ci3.googleusercontent.com/meips/ADKq_NbzUBtO5cgsnYTphikYrjBZ0omWL_UAEQFZFKWY989u5E1I52WrDiDz8En5QNeuQPm2q_50WMFUmgfGc_xAfJx_gDj3c9M0nD6vpRGSdENixhorxWObqS1sJ6QLGhodA9rfYIPXhPui-xiG-L5VtgnuM95_GD2PkW8=s0-d-e1-ft#https://mcusercontent.com/0cd9acdf951e5f4c839bde221/images/fa8488c9-a600-27e6-55eb-eff7b9a649f5.png",
+    url: "https://mcusercontent.com/0cd9acdf951e5f4c839bde221/files/0d03b57e-3e79-8bb8-776b-86cee12a90a7/European_FEC_2026_newsletter_EN_2.pdf"
   },
   {
     title: "Powerboost",
