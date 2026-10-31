@@ -1,67 +1,10 @@
 const events = [
   {
-    title: "Family Day",
-    date: "2026-08-15T10:00:00",
-    location: "Zilvermeerlaan 2, 2400 Mol, België",
-    description: "Familiedag is dè jaarlijkse traditie waar we genieten van heerlijk eten, zwemmen en leuke momenten",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSwSj18sO3RI3p7Y7WPcammOWyqQp9F68zrn6b2JpQ-A&s=10"
-  },
-  {
-    title: "Open meeting",
-    date: "2026-08-27T19:30:00",
-    location: "Oude Lieshoutseweg 7, 5492 HT Sint-Oedenrode",
-    description: "De maandelijkse open meeting",
-    image: "https://wwsg.com/wp-content/uploads/2023/05/Speaker-on-small-stage-1024x576.jpg"
-  },
-  {
-    title: "Open meeting",
-    date: "2026-09-24T19:30:00",
-    location: "TBD",
-    description: "De maandelijkse open meeting",
-    image: "https://wwsg.com/wp-content/uploads/2023/05/Speaker-on-small-stage-1024x576.jpg"
-  },
-  {
-    title: "Open meeting",
-    date: "2026-10-29T19:30:00",
-    location: "Oude Lieshoutseweg 7, 5492 HT Sint-Oedenrode",
-    description: "De maandelijkse open meeting",
-    image: "https://wwsg.com/wp-content/uploads/2023/05/Speaker-on-small-stage-1024x576.jpg"
-  },
-  {
     title: "Open meeting",
     date: "2026-11-26T19:30:00",
     location: "Oude Lieshoutseweg 7, 5492 HT Sint-Oedenrode",
     description: "De maandelijkse open meeting",
     image: "https://wwsg.com/wp-content/uploads/2023/05/Speaker-on-small-stage-1024x576.jpg"
-  },
-  {
-    title: "Powerboost",
-    date: "2026-08-29T11:00:00",
-    location: "Zoom",
-    description: "Een training waar tips en tricks jouw letterlijk een boost geven",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT_fNrFOLqjeU4CY4GxS4SXrJHkcjzZmFzLNoxy8divQ&s=10"
-  },
-  {
-    title: "Business Development Seminar (BDS)",
-    date: "2026-09-05T13:00:00",
-    location: "Tongerloplein 1, 5071 CX Udenhout",
-    description: "★ Guest speakers: We are pleased to welcome “Platinums” Sven & Benita Nisius from Switzerland at this seminar!",
-    image: "https://ci3.googleusercontent.com/meips/ADKq_NYrFQuE69Y3DEO0Cd7B_xM1jLShTOKa1gS0Hc9hZ0Ywlc39AQPdI3Ysm8XG_GXuC79Hc8_eUw7Ic5SDbwgUsAzw9OtK7onGx7dfis50tYuuCBUIF-00C9a2_BW_-eXSJtj00kJlFv1dDI7NQHKVSHYEJepNww=s0-d-e1-ft#https://www.meadowshale.eu/amember/data/public/editor/_Speakers/Nisius_Sven%26Benita%202026.jpg",
-    url: "https://www.meadowshale.eu/amember/signup/ticketshop"
-  },
-  {
-    title: "Powerboost",
-    date: "2026-10-04T11:00:00",
-    location: "Zoom",
-    description: "Een training waar tips en tricks jouw letterlijk een boost geven",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT_fNrFOLqjeU4CY4GxS4SXrJHkcjzZmFzLNoxy8divQ&s=10"
-  },
-  {
-    title: "Business Development Seminar (BDS)",
-    date: "2026-10-10T13:00:00",
-    location: "Tongerloplein 1, 5071 CX Udenhout",
-    description: "Het maandelijkse seminar waar fantastische spreker jouw inspireren en motiveren bij het bereiken van jouw dromen en doelen",
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQojPfGlItd6LIbnyJwLgBaeJsOXCcB7qFqS6JCX5Y8xQ&s=10"
   },
   {
     title: "Free Enterprise Celebration (FEC)",
@@ -99,5 +42,19 @@ const events = [
     location: "TBD",
     description: "TBD",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGWSh6PdeWcIotrkw7JCqDm7_5rtx0tpersLKJf1_2oQ&s=10"
+  },
+  {
+    title: "Business Development Seminar (BDS)",
+    date: "2027-01-09T13:00:00",
+    location: "Tongerloplein 1, 5071 CX Udenhout",
+    description: "Het maandelijkse seminar waar fantastische spreker jouw inspireren en motiveren bij het bereiken van jouw dromen en doelen",
+    image: "https://lh3.googleusercontent.com/a-/ALV-UjUPmrhVu-fgX_NuN9MbAZFqXJaZJtBXT4c8ZscTPVLZNVw7E1UI=s80-p"
+  },
+  {
+    title: "Business Development Seminar (BDS)",
+    date: "2027-03-13T13:00:00",
+    location: "Tongerloplein 1, 5071 CX Udenhout",
+    description: "Het maandelijkse seminar waar fantastische spreker jouw inspireren en motiveren bij het bereiken van jouw dromen en doelen",
+    image: "https://lh3.googleusercontent.com/a-/ALV-UjUPmrhVu-fgX_NuN9MbAZFqXJaZJtBXT4c8ZscTPVLZNVw7E1UI=s80-p"
   }
 ];
