@@ -32,8 +32,8 @@ const events = [
   {
     title: "Kerstviering",
     date: "2026-12-12T13:00:00",
-    location: "TBD",
-    description: "TBD",
+    location: "Oude Lieshoutseweg 7, 5492 HT Sint-Oedenrode",
+    description: "Onze jaarlijkse kerstviering. Een combinatie van eten, drinken, gezelligheid en saamhorigheid",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi5Yd5aCr2TI0BzpLLVLWRwtbj5n803eRoEax7DF1rcw&s=10"
   },
   {
