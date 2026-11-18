@@ -26,14 +26,14 @@ const events = [
     title: "Powerboost",
     date: "2026-11-28T11:00:00",
     location: "Zoom",
-    description: "Een training waar tips en tricks jouw letterlijk een boost geven",
+    description: "Een training waarin tips en tricks je letterlijk een boost geven",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT_fNrFOLqjeU4CY4GxS4SXrJHkcjzZmFzLNoxy8divQ&s=10"
   },
   {
     title: "Kerstviering",
     date: "2026-12-12T12:00:00",
     location: "Oude Lieshoutseweg 7, 5492 HT Sint-Oedenrode",
-    description: "Onze jaarlijkse kerstviering. Een combinatie van eten, drinken, gezelligheid en saamhorigheid",
+    description: "Onze jaarlijkse kerstviering: een combinatie van eten, drinken, gezelligheid en saamhorigheid.",
     image: "pictures/kerstviering.jpeg",
     url: "pictures/kerstviering.jpeg"
   },
@@ -48,14 +48,14 @@ const events = [
     title: "Business Development Seminar (BDS)",
     date: "2027-01-09T13:00:00",
     location: "Tongerloplein 1, 5071 CX Udenhout",
-    description: "Het maandelijkse seminar waar fantastische spreker jouw inspireren en motiveren bij het bereiken van jouw dromen en doelen",
+    description: "Het maandelijkse seminar waarin fantastische sprekers jou inspireren en motiveren bij het bereiken van jouw dromen en doelen.",
     image: "https://lh3.googleusercontent.com/a-/ALV-UjUPmrhVu-fgX_NuN9MbAZFqXJaZJtBXT4c8ZscTPVLZNVw7E1UI=s80-p"
   },
   {
     title: "Business Development Seminar (BDS)",
     date: "2027-03-13T13:00:00",
     location: "Tongerloplein 1, 5071 CX Udenhout",
-    description: "Het maandelijkse seminar waar fantastische spreker jouw inspireren en motiveren bij het bereiken van jouw dromen en doelen",
+    description: "Het maandelijkse seminar waarin fantastische sprekers jou inspireren en motiveren bij het bereiken van jouw dromen en doelen.",
     image: "https://lh3.googleusercontent.com/a-/ALV-UjUPmrhVu-fgX_NuN9MbAZFqXJaZJtBXT4c8ZscTPVLZNVw7E1UI=s80-p"
   },
   {
