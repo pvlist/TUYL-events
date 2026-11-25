@@ -63,14 +63,16 @@ const events = [
     date: "2027-02-20T10:00:00",
     location: "Hotel NH Eindhoven Conference Centre Koningshof, Locht 117, 5504 RM Eindhoven",
     description: "Er is een leven vòòr de Conference en er is een leven ná de Conference",
-    image: "https://media.istockphoto.com/id/2171020551/nl/vector/coming-soon-speechbubble-advertising-with-megaphone-icon.jpg?s=612x612&w=0&k=20&c=8sr0OfLWD0lRMKazdBUoRX33k1V0aw0mVmX3ER0PTv0="
+    image: "pictures/YWGC-2027.png",
+    url: "pictures/YWGC-2027.png"
   },
   {
     title: "Yager Winter Growth Conference (YWGC)",
     date: "2027-02-21T11:00:00",
     location: "Hotel NH Eindhoven Conference Centre Koningshof, Locht 117, 5504 RM Eindhoven",
     description: "Er is een leven vòòr de Conference en er is een leven ná de Conference",
-    image: "https://media.istockphoto.com/id/2171020551/nl/vector/coming-soon-speechbubble-advertising-with-megaphone-icon.jpg?s=612x612&w=0&k=20&c=8sr0OfLWD0lRMKazdBUoRX33k1V0aw0mVmX3ER0PTv0="
+    image: "pictures/YWGC-2027.png",
+    url: "pictures/YWGC-2027.png"
   },
   {
     title: "Yager Summer Growth Conference (YSGC)",
@@ -85,5 +87,47 @@ const events = [
     location: "Hotel NH Eindhoven Conference Centre Koningshof, Locht 117, 5504 RM Eindhoven",
     description: "Er is een leven vòòr de Conference en er is een leven ná de Conference",
     image: "https://media.istockphoto.com/id/2171020551/nl/vector/coming-soon-speechbubble-advertising-with-megaphone-icon.jpg?s=612x612&w=0&k=20&c=8sr0OfLWD0lRMKazdBUoRX33k1V0aw0mVmX3ER0PTv0="
+  },
+  {
+    title: "Open meeting",
+    date: "2027-01-28T19:30:00",
+    location: "Oude Lieshoutseweg 7, 5492 HT Sint-Oedenrode",
+    description: "De maandelijkse open meeting",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2DSxGqhbGliWE6JKy8YKqUwX_hd3yLgHQ9dwapK5EyQ&s=10"
+  },
+  {
+    title: "Open meeting",
+    date: "2027-02-25T19:30:00",
+    location: "Oude Lieshoutseweg 7, 5492 HT Sint-Oedenrode",
+    description: "De maandelijkse open meeting",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2DSxGqhbGliWE6JKy8YKqUwX_hd3yLgHQ9dwapK5EyQ&s=10"
+  },
+  {
+    title: "Open meeting",
+    date: "2027-03-25T19:30:00",
+    location: "Oude Lieshoutseweg 7, 5492 HT Sint-Oedenrode",
+    description: "De maandelijkse open meeting",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2DSxGqhbGliWE6JKy8YKqUwX_hd3yLgHQ9dwapK5EyQ&s=10"
+  },
+  {
+    title: "Open meeting",
+    date: "2027-04-29T19:30:00",
+    location: "Oude Lieshoutseweg 7, 5492 HT Sint-Oedenrode",
+    description: "De maandelijkse open meeting",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2DSxGqhbGliWE6JKy8YKqUwX_hd3yLgHQ9dwapK5EyQ&s=10"
+  },
+  {
+    title: "Open meeting",
+    date: "2027-05-27T19:30:00",
+    location: "Oude Lieshoutseweg 7, 5492 HT Sint-Oedenrode",
+    description: "De maandelijkse open meeting",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2DSxGqhbGliWE6JKy8YKqUwX_hd3yLgHQ9dwapK5EyQ&s=10"
+  },
+  {
+    title: "Open meeting",
+    date: "2027-06-24T19:30:00",
+    location: "Oude Lieshoutseweg 7, 5492 HT Sint-Oedenrode",
+    description: "De maandelijkse open meeting",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2DSxGqhbGliWE6JKy8YKqUwX_hd3yLgHQ9dwapK5EyQ&s=10"
   }
 ];
