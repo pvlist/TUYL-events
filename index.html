@@ -3,7 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Triple Up Your Lifestyle Calender</title>
+<title>Triple Up Your Lifestyle Calendar</title>
+
+<!-- PWA Manifest & Theme Colors -->
+<link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#0f172a">
+
+<!-- iOS Home Screen Support -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Triple Up">
+<link rel="apple-touch-icon" href="./icon-192.png">
 
 <style>
 *{
@@ -142,7 +152,7 @@ header h1{
 <body>
 
 <header>
-    <h1>Triple Up Your Lifestyle Calender</h1>
+    <h1>Triple Up Your Lifestyle Calendar</h1>
     <p>Ontdek alle aankomende evenementen op één plek.</p>
 </header>
 
@@ -240,6 +250,14 @@ if (typeof events !== "undefined" && Array.isArray(events)) {
   });
 } else {
   console.error("The 'events' array was not loaded properly.");
+}
+
+// 3. Register the Service Worker to make the app installable
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js")
+      .catch(err => console.error("Service Worker registration failed:", err));
+  });
 }
 </script>
 
