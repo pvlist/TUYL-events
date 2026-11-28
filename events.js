@@ -129,5 +129,12 @@ const events = [
     location: "Oude Lieshoutseweg 7, 5492 HT Sint-Oedenrode",
     description: "De maandelijkse open meeting",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2DSxGqhbGliWE6JKy8YKqUwX_hd3yLgHQ9dwapK5EyQ&s=10"
+  },
+  {
+    title: "Powerboost",
+    date: "2027-01-03T11:00:00",
+    location: "Zoom",
+    description: "Een training waarin tips en tricks je letterlijk een boost geven",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT_fNrFOLqjeU4CY4GxS4SXrJHkcjzZmFzLNoxy8divQ&s=10"
   }
 ];
